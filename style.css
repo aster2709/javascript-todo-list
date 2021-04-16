@@ -1,0 +1,140 @@
+:root {
+  --light: #596174;
+  --dark: #303a52;
+}
+body {
+  background: var(--dark);
+  font-family: "Rubik", cursive;
+}
+h1 {
+  color: yellowgreen;
+}
+.field {
+  max-width: 550px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.input {
+  width: 100%;
+  border: none;
+  height: 35px;
+  background-color: var(--light);
+  border-radius: 10px;
+  padding: 0 5px;
+  color: white;
+  font-size: 18px;
+  font-family: "Rubik";
+}
+.button {
+  cursor: pointer;
+  border: none;
+  width: 40px;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  background: none;
+  color: yellowgreen;
+  right: 105px;
+  top: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.button:hover {
+  background: yellowgreen;
+  color: white;
+}
+.todos {
+  margin-top: 3rem;
+}
+.todos div:last-child {
+  border-bottom: 1px solid grey;
+}
+.todo {
+  position: relative;
+  max-width: 500px;
+  display: flex;
+  background: var(--light);
+  color: white;
+  padding: 5px;
+  height: 45px;
+  font-size: 17px;
+  align-items: center;
+  border-top: 1px solid grey;
+  border-right: 1px solid grey;
+  border-left: 1px solid grey;
+  transition: all 0.5s ease;
+}
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin-right: auto;
+}
+.complete,
+.del {
+  color: grey;
+  cursor: pointer;
+  position: absolute;
+  background: none;
+  border: none;
+  background: var(--dark);
+  height: 55px;
+}
+.complete {
+  right: 25px;
+}
+.del {
+  right: 0;
+}
+.fa-check,
+.fa-trash {
+  pointer-events: none;
+}
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+select {
+  appearance: none;
+  outline: none;
+  outline: none;
+  background: none;
+  color: white;
+  cursor: pointer;
+  width: 100px;
+  height: 30px;
+  font-family: "Rubik", cursive;
+  border: none;
+  background-color: var(--light);
+  border-radius: 3px;
+}
+.select {
+  position: relative;
+  margin-left: 5px;
+}
+.select::after {
+  content: "\25BC";
+  font-size: 25px;
+  position: absolute;
+  color: yellowgreen;
+  right: 1px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  pointer-events: none;
+}
+.select:hover::after {
+  background-color: yellowgreen;
+  color: white;
+}
