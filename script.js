@@ -8,24 +8,22 @@ list.addEventListener("click", deleteCheck);
 filter.addEventListener("click", filterTodo);
 
 function addTodo(e) {
-  if (input.value) {
-    e.preventDefault();
-    const todo = document.createElement("div");
-    todo.classList.add("todo");
-    const p = document.createElement("p");
-    p.innerText = input.value;
-    todo.appendChild(p);
-    const complete = document.createElement("button");
-    complete.classList.add("complete");
-    complete.innerHTML = '<i class="fas fa-check"></i>';
-    todo.appendChild(complete);
-    const del = document.createElement("button");
-    del.classList.add("del");
-    del.innerHTML = '<i class="fas fa-trash"></i>';
-    todo.appendChild(del);
-    list.appendChild(todo);
-    input.value = "";
-  }
+  e.preventDefault();
+  const todo = document.createElement("div");
+  todo.classList.add("todo");
+  const p = document.createElement("p");
+  p.innerText = input.value;
+  todo.appendChild(p);
+  const complete = document.createElement("button");
+  complete.classList.add("complete");
+  complete.innerHTML = '<i class="fas fa-check"></i>';
+  todo.appendChild(complete);
+  const del = document.createElement("button");
+  del.classList.add("del");
+  del.innerHTML = '<i class="fas fa-trash"></i>';
+  todo.appendChild(del);
+  list.appendChild(todo);
+  input.value = "";
 }
 
 function deleteCheck(e) {
